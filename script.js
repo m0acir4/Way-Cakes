@@ -121,7 +121,7 @@ Método de pagamento: ${metodoPagamento}
 *Total: ${totalFormatted}*
     `;
 
-        const whatsappNumber = '5585982305342'; // <-- LEMBRE-SE DE COLOCAR SEU NÚMERO AQUI
+        const whatsappNumber = '5585991282882'; // <-- LEMBRE-SE DE COLOCAR SEU NÚMERO AQUI
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
         window.open(whatsappURL, '_blank');
@@ -147,4 +147,5 @@ Método de pagamento: ${metodoPagamento}
     });
     
     checkoutBtn.addEventListener('click', checkout);
+
 });
