@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Way Cakes - Adoçando Seus Momentos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Way Cakes</a>
+            <nav>
+                <a href="#menu">Cardápio</a>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Adoçando seus momentos especiais</h1>
+                <p>Bolos e doces artesanais feitos com amor e os melhores ingredientes.</p>
+                <a href="#menu" class="btn">Ver Nossas Delícias</a>
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="container">
+                <h2>Nosso Cardápio</h2>
+                <div class="menu-grid">
+                    <div class="produto-card">
+                        <img src="https://placehold.co/500x500/EAD9D5/333?text=Bolo+Red+Velvet" alt="Bolo Red Velvet">
+                        <h3>Bolo Red Velvet</h3>
+                        <p>Massa aveludada com um recheio cremoso de cream cheese.</p>
+                        <span class="preco">R$ 95,00</span>
+                        <a href="#" class="btn-produto">Encomendar</a>
+                    </div>
+
+                    <div class="produto-card">
+                        <img src="https://placehold.co/500x500/D4A7A0/333?text=Bolo+de+Chocolate" alt="Bolo de Chocolate">
+                        <h3>Bolo de Chocolate Belga</h3>
+                        <p>Intenso e molhadinho, com cobertura de ganache de chocolate belga.</p>
+                        <span class="preco">R$ 110,00</span>
+                        <a href="#" class="btn-produto">Encomendar</a>
+                    </div>
+
+                    <div class="produto-card">
+                        <img src="https://placehold.co/500x500/F0E4E1/333?text=Cheesecake" alt="Cheesecake de Frutas Vermelhas">
+                        <h3>Cheesecake de Frutas</h3>
+                        <p>Base crocante com um recheio suave e cobertura de geleia artesanal.</p>
+                        <span class="preco">R$ 85,00</span>
+                        <a href="#" class="btn-produto">Encomendar</a>
+                    </div>
+                    
+                    <div class="produto-card">
+                        <img src="https://placehold.co/500x500/E6C6B6/333?text=Cupcakes" alt="Cupcakes">
+                        <h3>Cupcakes Variados</h3>
+                        <p>Caixa com 6 unidades. Sabores: baunilha, chocolate e cenoura.</p>
+                        <span class="preco">R$ 45,00</span>
+                        <a href="#" class="btn-produto">Encomendar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="container sobre-flex">
+                <div class="sobre-texto">
+                    <h2>Nossa história, nossa paixão</h2>
+                    <p>A Way Cakes nasceu do sonho de transformar ingredientes de alta qualidade em momentos de felicidade. Cada bolo é preparado de forma artesanal, com atenção aos detalhes e muito carinho, garantindo um sabor único e inesquecível para suas celebrações.</p>
+                    <p>Valorizamos o frescor e a procedência, usando apenas ovos caipiras, chocolate nobre e frutas da estação.</p>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="https://placehold.co/600x700/D4A7A0/FFF?text=Way+Cakes" alt="Confeiteira decorando um bolo">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <h3>Faça sua encomenda!</h3>
+            <p>Entre em contato conosco e deixe seu evento mais doce.</p>
+            <div class="contato-info">
+                <a href="https://wa.me/5511999999999" target="_blank" class="contato-link">
+                    <i class="fab fa-whatsapp"></i> (11) 99999-9999
+                </a>
+                <a href="mailto:contato@waycakes.com" class="contato-link">
+                    <i class="fas fa-envelope"></i> contato@waycakes.com
+                </a>
+            </div>
+            <div class="social-media">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 Way Cakes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Meu Carrinho</h2>
+            <div id="cart-items-container">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="cart-total-price">R$ 0,00</span></p>
+            </div>
+
+            <div id="checkout-form">
+                <input type="text" id="endereco-input" placeholder="Digite seu endereço para entrega" required>
+                <select id="pagamento-input">
+                    <option value="Pix">Pagamento via Pix</option>
+                    <option value="Cartão na Entrega">Cartão na Entrega</option>
+                    <option value="Dinheiro na Entrega">Dinheiro na Entrega</option>
+                </select>
+            </div>
+
+            <a href="#" id="checkout-btn" class="btn">Finalizar Encomenda</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

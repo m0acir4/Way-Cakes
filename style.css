@@ -1,0 +1,445 @@
+/* --- Configurações Gerais e Variáveis --- */
+:root {
+    --cor-principal: #D4A7A0; /* Um tom de rosa queimado/pêssego */
+    --cor-secundaria: #F0E4E1; /* Um rosa bem clarinho */
+    --cor-texto: #5c3a2e; /* Marrom escuro para texto */
+    --cor-fundo: #fdfaf9;
+    --fonte-titulo: 'Playfair Display', serif;
+    --fonte-corpo: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    color: var(--cor-texto);
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background-color: rgba(253, 250, 249, 0.9);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    backdrop-filter: blur(5px);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+header nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--cor-principal);
+}
+
+/* --- Seção Principal (Hero) --- */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://placehold.co/1920x1080/D4A7A0/FFF?text=Foto+Incr%C3%ADvel+de+um+Bolo') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px; /* Para compensar o header fixo */
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin: 20px 0 30px;
+}
+
+.btn {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c3968b;
+    transform: translateY(-3px);
+}
+
+/* --- Seção Cardápio --- */
+#menu {
+    padding: 80px 0;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.produto-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.produto-card h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+}
+
+.produto-card p {
+    padding: 0 20px;
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço para alinhar os botões */
+}
+
+.produto-card .preco {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    margin: 15px 0;
+}
+
+.btn-produto {
+    background-color: var(--cor-texto);
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-produto:hover {
+    background-color: var(--cor-principal);
+}
+
+/* --- Seção Sobre Nós --- */
+#sobre {
+    padding: 80px 0;
+    background-color: var(--cor-secundaria);
+}
+
+.sobre-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.sobre-imagem {
+    flex: 1;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+footer h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contato-info {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contato-link {
+    color: var(--cor-fundo);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.contato-link:hover {
+    color: var(--cor-principal);
+}
+
+.contato-link i {
+    color: var(--cor-principal);
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.social-media {
+    margin-bottom: 30px;
+}
+
+.social-media a {
+    color: var(--cor-fundo);
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--cor-principal);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* --- Estilos do Carrinho e Modal --- */
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon i {
+    font-size: 1.5rem;
+    color: var(--cor-texto);
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background-color: var(--cor-principal);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+}
+
+#cart-items-container .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#cart-items-container .cart-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-info h4 {
+    margin: 0;
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#checkout-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* --- Estilos do Formulário do Carrinho --- */
+#checkout-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#checkout-form input,
+#checkout-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    header nav a {
+        margin: 0 10px;
+    }
+
+    #hero {
+        height: 80vh;
+    }
+
+    .sobre-flex {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .contato-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
