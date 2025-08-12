@@ -147,5 +147,4 @@ Método de pagamento: ${metodoPagamento}
     });
     
     checkoutBtn.addEventListener('click', checkout);
-
 });
